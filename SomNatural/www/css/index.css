@@ -1,0 +1,218 @@
+#app {
+    height: 100%;
+}
+
+.img_logo {
+    transform: translate(-50%, -50%);
+    animation: pulse 1s infinite;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-items: center;
+}
+
+.img_logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.custom-loader {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background:
+        radial-gradient(farthest-side, #3715CE 95%, #0000) 50% 1px/6px 6px no-repeat,
+        radial-gradient(farthest-side, #0000 calc(100% - 14px), #D1D1D9 0);
+    animation: s9 4s infinite linear;
+}
+
+@keyframes s9 {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.navbar .title-large {
+    display: grid;
+}
+
+.title-large-sub {
+    padding: 10px;
+}
+
+.page-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+}
+
+.page-content {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.toolbar {
+    background: transparent;
+}
+
+.toolbar::before {
+    filter: blur(25px);
+    background-color: #0000007f;
+    z-index: -1;
+    width: 200%;
+    height: 150%;
+}
+
+
+
+/*pegar primeiro*/
+.toolbar-inner>a:nth-child(1)>i.icon::before {
+    background: #3f594191 !important;
+    filter: blur(10px);
+}
+
+.toolbar-inner>a:nth-child(2)>i.icon::before {
+    background: #3f585991 !important;
+    filter: blur(10px);
+}
+
+.toolbar-inner>a:nth-child(3)>i.icon::before {
+    background: #4f3f5991 !important;
+    filter: blur(10px);
+}
+
+input[type=range] {
+    height: 23px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #000000;
+    border-radius: 1px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    height: 15px;
+    width: 10px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7.5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #000000;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #000000;
+    border-radius: 1px;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 15px;
+    width: 10px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 15px;
+    width: 10px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #000000;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #000000;
+}
+
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+
+    opacity: 0.3;
+    /* alterado de visibility: hidden; para opacity: 0; */
+}
+
+/* hover */
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:hover::-moz-range-thumb {
+    opacity: 1;
+    /* alterado de visibility: visible; para opacity: 1; */
+}

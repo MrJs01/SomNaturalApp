@@ -1,0 +1,157 @@
+<div id="app">
+	<div class="statusbar"></div>
+	<div class="view view-main">
+		<div data-name="home" class="page">
+			<!--transparent-->
+
+			<div class="navbar navbar-transparent">
+				<div class="navbar-bg"></div>
+				<div class="navbar-inner sliding">
+					<div class="title">Tabbar With Icons</div>
+					<div class="right">
+						<a class="link" @click=${togglePosition}>
+							<i class="md-only icon material-icons rotate-icon">compare_arrows</i>
+							<i class="if-not-md icon material-icons">arrow_up_arrow_down_circle_fill</i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="fab fab-right-bottom fab-morph" data-morph-to=".toolbar.fab-morph-target"
+				style="margin-bottom:65px; margin-right: 20px; box-shadow: 5px 5px 9px #c7c7c745, -5px -5px 9px #737373; background: transparent;">
+				<a id="btn_taphold_play" href="#">
+					<i class="icon material-icons" id="icon_btn_float">play_arrow</i>
+				</a>
+			</div>
+			<div class="toolbar tabbar tabbar-icons toolbar-bottom fab-morph-target" style="z-index: 1000; ">
+				<div class="toolbar-inner">
+					<div style="
+						position: fixed; top: -35px;" class="block">
+						<h3 class="title" id="name_music">Nome da musica</h3>
+
+					</div>
+					<input type="range" min="0" max="100" step="1" value="10" style="
+							position: fixed;
+							top: -25px;
+							left:0px" id="progressSlider" />
+
+					<div class="block grid grid-cols-3" style="
+					width: 100%;
+					height: 100%;
+					justify-content: center;
+					align-items: center;
+					gap:20px">
+						<button class="button" style="height: 100%;" onclick="previousAudio()">
+							<span href="#" class="material-icons">
+								skip_previous
+							</span>
+						</button>
+						<button class="button" style="height: 100%;" onclick="playAudio()" id="btn_play">
+							<span href="#" class="material-icons">
+								play_arrow
+							</span>
+
+						</button>
+						<button class="button" style="height: 100%;" onclick="skipAudio()">
+							<span href="#" class="material-icons">
+								skip_next
+							</span>
+
+						</button>
+
+
+					</div>
+
+					<audio src="" id="audio_player" style="display: none;"></audio>
+
+
+				</div>
+			</div>
+
+			<div class="toolbar tabbar-icons toolbar-bottom">
+				<div class="toolbar-inner">
+					<a href="#tab-1" class="tab-link tab-link-active">
+						<i class="icon material-icons ">terrain</i>
+						<span class="tabbar-label"></span>
+					</a>
+					<a href="#tab-2" class="tab-link">
+						<i class="icon material-icons ">water</i>
+						<span class="tabbar-label"></span>
+					</a>
+					<a href="#tab-3" class="tab-link">
+						<i class="icon material-icons ">auto_awesome</i>
+						<span class="tabbar-label"></span>
+					</a>
+				</div>
+			</div>
+			<div class="tabs fab-close">
+				<div class="page-content tab tab-active" id="tab-1"
+					style="background-image: url('https://i.pinimg.com/originals/87/81/0a/87810a0cf7c9f3d787b2a4059ab601ed.gif');">
+					<div class="block">
+
+						<div class="card-content">
+							<div class="list media-list no-safe-areas">
+								<ul>
+									<li class="item-content">
+										<div class="item-media"><img
+												src="https://backingtrackbrasil.com/ttbtb/img/skidrow.jpg" width="44" />
+										</div>
+										<div class="item-inner">
+											<div class="item-title-row">
+												<div class="item-title">In a Darkened Room</div>
+											</div>
+											<div class="item-subtitle">Skid Row( Baixo, Bateria, Voz)</div>
+										</div>
+										<div class="item-after">
+											<button class="button btn_music"
+												data-urlMusic="In_A_Darkened_Room-315754.mp3"
+												data-musicTitle="In a Darkened Room">
+												<i class="icon material-icons">play_arrow</i>
+											</button>
+										</div>
+									</li>
+									<li class="item-content">
+										<div class="item-media"><img
+												src="https://backingtrackbrasil.com/ttbtb/img/nirvana.jpg" width="44" />
+										</div>
+										<div class="item-inner">
+											<div class="item-title-row">
+												<div class="item-title">Smells Like Nirvana</div>
+											</div>
+											<div class="item-subtitle">Nirvana</div>
+										</div>
+										<div class="item-after">
+											<button class="button btn_music"
+												data-urlMusic="Smells_Like_Nirvana-60513.mp3"
+												data-musicTitle="Smells Like Nirvana">
+												<i class="icon material-icons">play_arrow</i>
+											</button>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="page-content tab" id="tab-2">
+					<video style="position: fixed;
+					width: 100%;
+					height: 100%;
+					z-index: -8;
+					top: 0;
+					object-fit: cover;" src="./img/ocean.mp4" autoplay muted loop></video>
+					<div class="block">
+
+					</div>
+				</div>
+				<div class="page-content tab" id="tab-3"
+					style="background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/pillars_of_creation.jpg');">
+					<div class="block">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
